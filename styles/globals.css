@@ -1,0 +1,12 @@
+.white-bullets ul {
+  list-style-type: disc !important;
+  color: white !important;
+}
+
+.white-bullets ul li {
+  color: white !important;
+}
+
+.white-bullets ul li::marker {
+  color: white !important;
+} 

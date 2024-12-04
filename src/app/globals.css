@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Target both the prose class and our custom class for maximum specificity */
+.prose.white-bullets ul,
+.prose.white-bullets ul li,
+.prose.white-bullets ul li p {
+  color: white !important;
+}
+
+/* Specifically target the bullet points */
+.prose.white-bullets ul li::marker,
+.prose.white-bullets ul li::before {
+  color: white !important;
+  opacity: 1 !important;
+}
+
+/* Override any Tailwind prose styles */
+.prose.white-bullets :where(ul):not(:where([class~="not-prose"] *)) {
+  color: white !important;
+  list-style-type: disc !important;
+}
